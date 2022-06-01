@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="Styles/Index.css">
+    <title>Inventory App</title>
+</head>
+
+<body dir="rtl">
+    <header class="header">
+        <h1>اپ انبارداری <span class="number-product">0</span></h1>
+    </header>
+    <main class="main">
+        <h2 class="ask-add-new-category">اضافه کردن دسته بندی جدید؟</h2>
+        <div class="hidden">
+            <div class="title">
+                <h2>اضافه کردن دسته بندی جدید</h2>
+            </div>
+            <div class="title-category">
+                <form>
+                    <label for="title-category">عنوان</label>
+                    <input type="text" id="title-category">
+                </form>
+            </div>
+            <div class="description">
+                <form>
+                    <label for="description-category">توضیحات</label>
+                    <textarea type="text" id="description-category"></textarea>
+                </form>
+            </div>
+            <div class="add-cancel-btn">
+                <form>
+                    <button class="cancel-btn">صرف نظر کردن</button>
+                    <button class="add-btn" id="add-new-category" type="submit">اضافه کردن</button>
+                </form>
+            </div>
+        </div>
+        <div class="add-new-product">
+            <div class="title">
+                <h2>اضافه کردن محصول جدید</h2>
+            </div>
+            <div class="title-product">
+                <form>
+                    <label for="title-product">عنوان</label>
+                    <input type="text" id="title-product">
+                </form>
+            </div>
+            <div class="quantity">
+                <form>
+                    <label for="quantity">تعداد</label>
+                    <input type="number" id="quantity-input">
+                </form>
+            </div>
+            <div class="select-category">
+                <form>
+                    <select id="select-category-el">
+                        <option value="default">انتخاب دسته بندی</option>
+                    </select>
+                </form>
+            </div>
+            <div class="add-cancel-btn">
+                <form>
+                    <button class="add-btn" type="submit" id="add-new-product">اضافه کردن</button>
+                </form>
+            </div>
+        </div>
+        <div class="product-list">
+            <h2>لیست محصولات</h2>
+            <div class="search">
+                <form>
+                    <label for="search">جستجو</label>
+                    <input type="text" id="search-input">
+                </form>
+            </div>
+            <div class="sort">
+                <label for="sort">مرتب سازی بر اساس</label>
+                <select id="sort-products">
+                    <option value="newest">جدیدترین</option>
+                    <option value="oldest">قدیمی ترین</option>
+                </select>
+            </div>
+            <div class="products">
+
+            </div>
+        </div>
+        </div>
+    </main>
+
+    <script src="Scripts/app.js" type="module"></script>
+</body>
+
+</html>
