@@ -81,6 +81,7 @@ body {
   margin-bottom: 20px;
   background: #334155;
   box-shadow: inset 0 0 #efeff1;
+  animation: showForm 0.3s 1 ease-in-out;
 }
 
 .main .add-new-category .title {
@@ -343,11 +344,11 @@ body {
   flex-direction: column;
 }
 
-.main .product-list h2 {
+.main .product-list > h2 {
   font-size: 2rem;
   font-family: "yekan";
   color: #c3c7cc;
-  margin: 20px 0;
+  margin: 20px auto;
 }
 
 .main .product-list .search,
@@ -369,6 +370,8 @@ body {
 .main .product-list .search label,
 .main .product-list .sort label {
   font-size: 1.5rem;
+  display: flex;
+  align-items: center;
   font-family: "yekan";
   color: #c3c7cc;
 }
@@ -486,9 +489,6 @@ body {
 
 /* responsive */
 @media (min-width: 610px) and (max-width: 900px) {
-  .header {
-    height: 30px;
-  }
   .header h1 {
     font-size: 2rem;
   }
@@ -525,8 +525,8 @@ body {
   .main .product-list > h2 {
     width: 80%;
     display: flex;
-    justify-content: flex-start;
-    margin: 0 auto;
+    justify-content: center;
+    margin: 20px auto;
   }
   .main .product-list .products {
     width: 100%;
@@ -578,8 +578,8 @@ body {
   .main .product-list > h2 {
     width: 50%;
     display: flex;
-    justify-content: flex-start;
-    margin: 0 auto;
+    justify-content: center;
+    margin: 20px auto;
   }
   .main .product-list .products {
     width: 90%;
@@ -637,8 +637,8 @@ body {
   .main .product-list > h2 {
     width: 50%;
     display: flex;
-    justify-content: flex-start;
-    margin: 0 auto;
+    justify-content: center;
+    margin: 20px auto;
   }
   .main .product-list .products {
     width: 80%;
@@ -706,8 +706,8 @@ body {
   .main .product-list > h2 {
     width: 50%;
     display: flex;
-    justify-content: flex-start;
-    margin: 0 auto;
+    justify-content: center;
+    margin: 20px auto;
   }
   .main .product-list .products {
     width: 80%;
@@ -740,4 +740,13 @@ body {
 
 .hidden {
   display: none;
+}
+
+@keyframes showForm {
+  from {
+    height: 0;
+  }
+  to {
+    height: 360px;
+  }
 }

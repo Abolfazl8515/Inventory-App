@@ -15,7 +15,7 @@ class CategoryView {
     );
     categoryAddBtn.addEventListener("click", (e) => this.addNewCategory(e));
     categoryCancelBtn.addEventListener("click", (e) =>
-      this.cancelAddNewCategory(e)
+      this.hideAddNewCategoryForm(e)
     );
     this.categories = [];
   }
@@ -31,13 +31,6 @@ class CategoryView {
     categoryTitle.value = "";
     categoryDescription.value = "";
     this.hideAddNewCategoryForm();
-  }
-  cancelAddNewCategory(e) {
-    e.preventDefault();
-    categoryTitle.value = "";
-    categoryDescription.value = "";
-    showAddNewCategoryFromBtn.nextElementSibling.className = "hidden";
-    showAddNewCategoryFromBtn.classList.remove("hidden");
   }
   setApp() {
     this.categories = Storage.getAllCategories();
@@ -56,7 +49,10 @@ class CategoryView {
     showAddNewCategoryFromBtn.nextElementSibling.className = "add-new-category";
     e.target.classList.add("hidden");
   }
-  hideAddNewCategoryForm() {
+  hideAddNewCategoryForm(e) {
+    e.preventDefault();
+    categoryTitle.value = "";
+    categoryDescription.value = "";
     showAddNewCategoryFromBtn.nextElementSibling.className = "hidden";
     showAddNewCategoryFromBtn.classList.remove("hidden");
   }
