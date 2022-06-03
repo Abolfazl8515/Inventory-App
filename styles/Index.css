@@ -533,9 +533,6 @@ body {
   }
 }
 @media (min-width: 435px) and (max-width: 612px) {
-  .header {
-    height: 30px;
-  }
   .header h1 {
     font-size: 2rem;
   }
@@ -592,9 +589,6 @@ body {
   }
 }
 @media (min-width: 365px) and (max-width: 435px) {
-  .header {
-    height: 30px;
-  }
   .header h1 {
     font-size: 2rem;
   }
@@ -661,9 +655,6 @@ body {
   }
 }
 @media (max-width: 364px) {
-  .header {
-    height: 30px;
-  }
   .header h1 {
     font-size: 2rem;
   }
